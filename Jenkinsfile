@@ -25,6 +25,7 @@ pipeline {
         stage('Install NPM') {
             steps {
                 sh 'npm install'
+                echo 'Npm installed'
             }
         }
 
