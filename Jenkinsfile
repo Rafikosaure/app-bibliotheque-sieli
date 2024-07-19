@@ -28,11 +28,11 @@ pipeline {
                     // Install Node.js dependencies for both frontend and backend
                     dir('FrontBibliotheque') {
                         echo 'install frontend'
-                        bat 'npm install'
+                        sh 'npm install'
                     }
                     dir('BackBibliotheque') {
                         echo 'Installation backend'
-                        bat 'npm install'
+                        sh 'npm install'
                     }
                 }
             }
@@ -48,7 +48,7 @@ pipeline {
                     }
                     dir('BackBibliotheque') {
                         echo 'sur le back'
-                        bat 'npm test'
+                        sh 'npm test'
                     }
                 }
             }
@@ -68,7 +68,7 @@ pipeline {
 
                 echo 'Tests succeeded, merging dev into main'
                 withCredentials([usernamePassword(credentialsId: env.GIT_CREDENTIALS_ID, passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
-                    bat """
+                    sh """
                         git config --global user.email "rafikbensadi@live.fr"
                         git config --global user.name "Rafikosaure"
                         git checkout main
