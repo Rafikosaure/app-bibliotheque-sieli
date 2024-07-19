@@ -27,9 +27,11 @@ pipeline {
                 script {
                     // Install Node.js dependencies for both frontend and backend
                     dir('FrontBibliotheque') {
+                        echo 'install frontend'
                         bat 'npm install'
                     }
                     dir('BackBibliotheque') {
+                        echo 'Installation backend'
                         bat 'npm install'
                     }
                 }
