@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         NODE_ENV = 'test'
-        GIT_CREDENTIALS_ID = 'SieliAtelierCredential' // Remplacez par l'ID de vos credentials Jenkins
+        GIT_CREDENTIALS_ID = 'Sieli-Github-Auth-Credentials' // Remplacez par l'ID de vos credentials Jenkins
     }
     /*triggers {
         cron('H/5 * * * *') // Planification pour exécuter toutes les 5 minutes
