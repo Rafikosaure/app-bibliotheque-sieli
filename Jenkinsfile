@@ -22,13 +22,6 @@ pipeline {
             }
         }
 
-        stage('Install NPM') {
-            steps {
-                sh 'install npm'
-                echo 'Npm installed'
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 script {
