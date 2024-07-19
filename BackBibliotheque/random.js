@@ -1,1 +1,0 @@
-// Fichier de test pour manipulation des Jenkinsfile.
