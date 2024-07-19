@@ -24,7 +24,7 @@ pipeline {
 
         stage('Install NPM') {
             steps {
-                sh 'sudo apt install npm'
+                sh 'install npm'
                 echo 'Npm installed'
             }
         }
